@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Dom.Storage</id>
+    <version>1.1.0.0</version>
+    <authors>Dom.Clayton</authors>
+    <description>Contains storage related functions.</description>
+    <releaseNotes>Revised the function structure</releaseNotes>
+    <copyright></copyright>
+    <tags>storage</tags>
+  </metadata>
+</package>
