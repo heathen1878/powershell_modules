@@ -30,7 +30,7 @@ $source = $source.Replace('v3/index.json','v2')
 
 Register-PSRepository -Name "MyPSRepo" -sourceLocation $source -PublishLocation $source -InstallationPolicy Trusted -Credential $azureDevOpsCred
 
-Register-PackageSource -Name "MyPSRepo" -Location $source -ProviderName NuGet
+Register-PackageSource -Name "MyPSRepo" -Location $source -ProviderName NuGet -Credential $azureDevOpsCred
 
 ```
 
