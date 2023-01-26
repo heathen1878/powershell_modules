@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Dom.Containers</id>
+    <version>1.0.1</version>
+    <authors>Dom.Clayton</authors>
+    <description>Contains container based functions</description>
+    <copyright></copyright>
+    <tags>Containers</tags>
+  </metadata>
+</package>
