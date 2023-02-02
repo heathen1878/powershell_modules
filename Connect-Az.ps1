@@ -21,9 +21,9 @@ function Connect-Az {
     #>
 
     #Requires -Modules @{ModuleName="Az.Accounts"; ModuleVersion="2.5.2"}
-    #Requires -Modules @{ModuleName= "Microsoft.PowerShell.ConsoleGuiTools"; ModuleVersion="0.6.2"}
+    #Requires -Modules @{ModuleName="Microsoft.PowerShell.ConsoleGuiTools"; ModuleVersion="0.6.2"}
 
-    # Gets access to cmdlet features
+    # Gets access to cmdlet features such as verbose
     [CmdletBinding()]
     Param
     ()
@@ -51,10 +51,10 @@ function Connect-Az {
     # Check whether PowerShell is connected to a tenant
     If (Get-AzContext){
     # Output the tenant Name
-    Write-Output ('Connected to {0}' -f $(Get-AzTenant -TenantId (Get-AzContext).Tenant.Id).Name)
+    Write-Host ('Connected to {0}' -f $(Get-AzTenant -TenantId (Get-AzContext).Tenant.Id).Name) -ForegroundColor Green
 
     Write-Verbose 'Asking user whether they want to switch tenant'
-    $prompt = Set-Prompt -promptString 'Would you like to access another AAD tenant? - Default ''N'''
+    $prompt = Set-Prompt -promptString 'Would you like to access another AAD tenant? - Default ''No'''
 
     If ($prompt.ToUpper() -eq 'Y' -or $prompt.ToUpper() -eq 'YES'){
 
@@ -152,6 +152,6 @@ function Connect-Az {
     }   
 
     # Output the tenant Name
-    Write-Output ('Connected to {0}' -f $(Get-AzTenant -TenantId (Get-AzContext).Tenant.Id).Name)
+    Write-Host ('Connected to {0}' -f $(Get-AzTenant -TenantId (Get-AzContext).Tenant.Id).Name) -ForegroundColor Green
 
 }
