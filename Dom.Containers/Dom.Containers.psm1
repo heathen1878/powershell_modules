@@ -20,7 +20,7 @@ function Get-AvailableAzDoAgent {
     # Connect to DevOps
     Set-VSTeamAccount -Account $azdo_service_account_url -PersonalAccessToken $azdo_personal_access_token
 
-    # Get the agents in the Platform Pool and determine whether any are free
+    # Get the agents in the pool and determine whether any are free
     # Check whether the pool has at least one agent
     If ((Get-VSTeamPool -Id (Get-VSTeamPool | Where-Object {$_.Name -eq $pool_name}).Id).Count -gt 0) { 
         # Check whether any agents are free
